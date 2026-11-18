@@ -5,7 +5,7 @@ public class PruebaJuegoAhorcado {
 	public static void main(String[] args) {
 	
 		Scanner sc=new Scanner(System.in);
-		
+		Archivo a=new Archivo();
 		
 		System.out.println("============== Redlas del juego =============");
 		System.out.println("1. Solo se podrá intentar adivinar 10 veces");
@@ -28,7 +28,7 @@ public class PruebaJuegoAhorcado {
 			
 			switch(opcion) {
 			case "1":
-				
+				System.out.println(a.verificarArchivo());
 			break;
 			case "2":
 				
