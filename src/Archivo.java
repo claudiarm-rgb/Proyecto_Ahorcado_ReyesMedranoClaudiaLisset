@@ -28,9 +28,29 @@ public class Archivo {
 		return vacio;
 	}
 	
-	public void llenarArchivoConPalabras(String Palabra) {
+	public void llenarArchivoConPalabras(String[]Palabras, String ruta) {
 		
+		for(int i=1; i<Palabras.length; i++) {
+			String clave=Palabras[i];
+			int j=i-1;
+			
+			while(j>=0 && Palabras[j].compareToIgnoreCase(clave)>0) {
+				
+				Palabras[j+1]=Palabras[j];
+				j=j-1;
+			}
+			Palabras[j+1]=clave;
+		}
 		
+		try(BufferedReader br=new BufferedReader(new FileReader(ruta))){
+			
+			
+			
+		}catch(FileNotFoundException e) {
+			
+		}catch(IOException e) {
+			
+		}
 	}
 	
 	public void borrarArchivo() {
